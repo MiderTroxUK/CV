@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined){visibility:hidden}
+    body{margin:0;font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .doc p,.doc li{margin:0 0 9px;font-size:14px;line-height:1.6;orphans:3;widows:3}
+    .doc ul{margin:0 0 10px;padding-left:20px}
+    .doc h1{margin:0 0 6px;font-family:var(--font-heading);font-weight:400;font-size:34px;line-height:1.1}
+    .doc h2{margin:26px 0 10px;font-family:var(--font-heading);font-weight:600;font-size:21px;padding-bottom:4px;border-bottom:1px solid var(--color-accent-500)}
+    .doc table{width:100%;border-collapse:collapse;font-size:13px;margin:4px 0 12px}
+    .doc th{text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--color-text)}
+    .doc td{padding:6px 8px;border-bottom:1px solid var(--color-divider);vertical-align:top;line-height:1.45}
+  </style>
+</helmet>
+<doc-page size="a4" margin="0.8in">
+  <div class="doc" lang="fr" data-screen-label="Analyse" style="font-family:var(--font-body);color:var(--color-text)">
+    <h1>John Hoarau : analyse de profil, points forts, cibles</h1>
+    <p style="color:var(--color-neutral-700);font-size:13px">Note d'accompagnement des deux CV (FR 1 page, UK 2 pages). Septembre 2026.</p>
+
+    <h2>1. Analyse stratégique</h2>
+    <p>Le profil réunit deux compétences que les bureaux d'études aéro-défense recrutent d'habitude séparément : le calcul de structures (FEA statique et dynamique, composites, justification normée) et le calcul scientifique en Python (optimisation, modèles de substitution, vision). Peu de candidats juniors ont ANSYS, Abaqus et Fluent d'un côté, PyTorch et des solveurs PSO/BFGS écrits à la main de l'autre.</p>
+    <p>Le point faible d'origine était l'absence d'expérience aéro directe : génie civil chez CMR, supply chain et imagerie satellite chez ALTEN, robotique chez KOMPAÏ. Les projets Cranfield et ESTIA de 2026 le comblent en grande partie : fuselage sous Abaqus, cuisson autoclave d'un stratifié AS4/8552, optimisation de profil, et surtout la voilure de drone qui enchaîne V-n, CLT, FEM coques, modale, random et essai. Le CV est donc construit autour d'un seul récit : ingénieur calcul qui comprend le comportement d'une structure et sait automatiser son travail.</p>
+    <p>Ce qui a été retiré ou réduit : le vocabulaire marketing du LinkedIn actuel (« engineered », « comprehensive », « highlights »), le détail de KOMPAÏ (ramené à deux lignes), le projet de suivi cardiaque par vision (hors récit, retiré du CV UK après un premier jet), le bac STI2D. Ce qui a été réorganisé : les projets techniques passent avant la formation, ALTEN est présenté comme Direction de l'Innovation et non comme ESN, la formation groupe les modules Cranfield sous chaque diplôme.</p>
+    <p>Ce qui a été volontairement laissé sans chiffre : le projet voilure. Aucun RF, écart main/FEM ni écart essai/calcul n'a été fourni, donc le CV décrit la chaîne et les livrables sans inventer de résultats. Dès que tu as les valeurs, une phrase suffit : « RF mini X à charge extrême, écart CLT/FEM Y %, raideur essai/FEM Z % ».</p>
+
+    <h2>2. Points forts pour un recruteur</h2>
+    <ul>
+      <li>Justification normée déjà pratiquée : sept bâtiments acier aux Eurocodes, avec notes de calcul, sous ANSYS et Robot. Le passage à CS-23 ou aux méthodes structures d'un avionneur est un changement de norme, pas de métier.</li>
+      <li>Composites du procédé à la pièce : simulation de cuisson ACCS avec cinétique et Tg, critères Tsai-Wu, Hashin et Puck, CLT à la main puis FEM coques. C'est le vocabulaire exact des BE structures composites.</li>
+      <li>Vérification et validation : études de convergence, GCI à 0,60 %, comparaison Ansys/Nastran prévue, corrélation essai/calcul sur la voilure. Un recruteur calcul lit d'abord cela.</li>
+      <li>Automatisation : solveur PSO écrit et validé sur Griewank, automatisation XFOIL, scripts CLT, pipeline vision. Argument fort chez Airbus et Safran où le calcul s'industrialise en Python.</li>
+      <li>Autonomie prouvée : deux projets R&amp;D menés seul chez ALTEN de la bibliographie à la validation, et un projet de groupe international dirigé (quatre personnes, deux pays).</li>
+      <li>Double diplôme ESTIA et Cranfield, anglais professionnel, nationalité française : éligible aux postes défense et lisible par un recruteur britannique comme français.</li>
+    </ul>
+
+    <h2>3. Titres de poste cibles</h2>
+    <table>
+      <thead><tr><th>Français</th><th>Anglais (UK)</th><th>Employeurs types à Toulouse</th></tr></thead>
+      <tbody>
+        <tr><td>Ingénieur calcul de structures (junior)</td><td>Stress Engineer / Structural Analysis Engineer (graduate)</td><td>Airbus, Airbus Defence and Space, Latécoère, Liebherr Aerospace</td></tr>
+        <tr><td>Ingénieur simulation numérique / FEA</td><td>Simulation Engineer / FEA Engineer</td><td>Safran, Thales Alenia Space, ALTEN (mission BE), Capgemini Engineering</td></tr>
+        <tr><td>Ingénieur calcul composites</td><td>Composite Stress Engineer</td><td>Airbus, Daher, Latécoère</td></tr>
+        <tr><td>Ingénieur dynamique et vibrations</td><td>Dynamics &amp; Vibration Engineer</td><td>Thales Alenia Space, Safran</td></tr>
+        <tr><td>Ingénieur méthodes calcul / automatisation</td><td>CAE Methods Engineer</td><td>Airbus, Safran Tech, IRT Saint Exupéry</td></tr>
+      </tbody>
+    </table>
+    <p>Titre retenu en tête des CV : « Ingénieur calcul &amp; simulation structures » / « Graduate Structural Analysis &amp; Simulation Engineer ». Les deux contiennent les mots-clés que filtrent les ATS d'Airbus, Thales et Safran (stress, structural analysis, FEA, simulation, composites).</p>
+
+    <h2>4. Notes ATS et points à compléter</h2>
+    <ul>
+      <li>Les deux CV sont en texte réel (pas d'image de texte), une colonne principale lisible de haut en bas, dates à droite, intitulés d'outils écrits en clair (ANSYS, Abaqus, Fluent, CATIA, Python). C'est ce qu'attendent les parseurs de candidature d'Airbus (Workday), Thales et Safran.</li>
+      <li>Adresse e-mail : les deux adresses fournies sont universitaires et expireront. Remplace-les par une adresse personnelle avant d'envoyer.</li>
+      <li>Ajoute le lien GitHub du dossier voilure dès qu'il est public, ainsi que les chiffres du projet (RF, écarts, corrélation).</li>
+      <li>Le CV UK ne comporte ni photo, ni adresse postale, ni date de naissance, conformément à l'usage britannique. Le CV FR garde photo et adresse.</li>
+      <li>Versions : ce CV suit le récit « calcul ». Pour une offre ingénieur système ou jumeau numérique, il suffit de changer l'accroche et de remonter ALTEN au-dessus de CMR ; la structure reste la même.</li>
+    </ul>
+  </div>
+</doc-page>
+</x-dc>
+</body>
+</html>

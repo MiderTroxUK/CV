@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined){visibility:hidden}
+    body{margin:0;font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .lt p{margin:0;font-size:12.4px;line-height:1.6;orphans:3;widows:3}
+  </style>
+</helmet>
+<doc-page size="a4">
+  <section class="page lt" id="p1" data-screen-label="Lettre IRDL Lorient" lang="fr">
+    <div style="position:absolute;inset:0;background:#ffffff;padding:52px 64px 48px;box-sizing:border-box;font-family:var(--font-body);color:var(--color-text);display:flex;flex-direction:column;gap:20px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding-bottom:14px;border-bottom:1px solid var(--color-accent-500)">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <p style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.05">John Hoarau</p>
+          <p style="color:var(--color-accent-700);font-size:12px">Ingénieur calcul &amp; simulation, double diplôme ESTIA × Cranfield</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;text-align:right;font-size:11.3px;color:var(--color-neutral-800)">
+          <p style="font-size:11.3px">11 bis allée Charles de Fitte, 31300 Toulouse</p>
+          <p style="font-size:11.3px">+33 7 57 67 13 75 · <a href="mailto:john.hoarau@etu.estia.fr">john.hoarau@etu.estia.fr</a></p>
+          <p style="font-size:11.3px"><a href="https://www.linkedin.com/in/john-hoarau">linkedin.com/in/john-hoarau</a></p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <p style="color:var(--color-neutral-700)">Toulouse, le 18 septembre 2026</p>
+        <p style="font-weight:600">Objet : candidature au poste d'ingénieur en calcul numérique pour la mécanique des matériaux, IRDL, projet H2FORM3G, Lorient</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:11px;text-align:justify;hyphens:auto">
+        <p>Madame Thuillier,</p>
+        <p>Je candidate au poste d'ingénieur en calcul numérique ouvert sur le projet H2FORM3G. Je termine en octobre 2026 un double diplôme d'ingénieur généraliste ESTIA et de MSc Computational and Software Techniques in Engineering à Cranfield University. Le poste demande de mener des comparaisons essais-calculs sous Abaqus à partir d'une base expérimentale déjà constituée, et de calibrer un critère de rupture ; c'est le type de travail que j'ai pratiqué sur mes projets de fin d'études.</p>
+        <p>À Cranfield, j'ai modélisé un tronçon de fuselage sous Abaqus, coques S4R et poutres B31, avec une étude de sensibilité au maillage et deux variantes de chargement. Sur un projet personnel de voilure composite de drone, j'ai dimensionné un stratifié à la main par la théorie des stratifiés (matrice ABD, critère de Tsai-Wu, script Python), puis vérifié la structure en coques ANSYS, avant de fabriquer un tronçon et de le tester en raideur et en modal par impact ; l'écart entre l'essai et le modèle a été la partie la plus formatrice du projet. À l'ESTIA, mon option porte sur les composites et j'ai travaillé les critères de rupture de Tsai-Wu, Hashin et Puck ainsi que la simulation de cuisson autoclave d'un stratifié, avec mise en donnée d'un modèle à partir de propriétés matériau mesurées. Je n'ai pas encore pratiqué la corrélation d'images numériques ni le système VIC 3D, mais j'ai l'habitude de partir de données expérimentales pour construire un modèle et de vérifier qu'il les reproduit.</p>
+        <p>J'écris en Python au quotidien pour automatiser mes post-traitements : chez ALTEN, à Toulouse, j'ai construit seul deux modèles de calcul, l'un avec calibration bayésienne de paramètres à partir de données réelles. J'ai aussi rédigé des notes de calcul et des rapports techniques chez CMR, où j'ai justifié aux Eurocodes sept bâtiments industriels en charpente acier. L'anglais est ma langue de travail depuis un an à Cranfield, ce qui couvre largement le niveau B1 demandé et me permet de présenter des résultats en réunion de projet dans les deux langues.</p>
+        <p>Je suis disponible pour un contrat de dix mois à partir de décembre 2026 et prêt à m'installer à Lorient. Je serais heureux de vous présenter mes travaux de calcul et d'essai lors d'un entretien.</p>
+        <p>Je vous prie d'agréer, Madame Thuillier, l'expression de mes salutations distinguées.</p>
+      </div>
+
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:2px">
+        <p style="font-family:var(--font-heading);font-weight:600;font-size:16px">John Hoarau</p>
+        <p style="font-size:11.3px;color:var(--color-neutral-700)">Pièce jointe : curriculum vitae</p>
+      </div>
+    </div>
+  </section>
+</doc-page>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { this._nudge(0); }
+  _nudge(n) {
+    const dp = document.querySelector('doc-page');
+    const sheet = dp && dp.shadowRoot && dp.shadowRoot.querySelector('.sheet');
+    if (sheet && dp.querySelector(':scope > .page') && !sheet.classList.contains('paginated') && typeof dp._measure === 'function') dp._measure();
+    if (n < 12) setTimeout(() => this._nudge(n + 1), 250);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

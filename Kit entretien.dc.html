@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined){visibility:hidden}
+    body{margin:0;font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .doc p,.doc li{margin:0 0 8px;font-size:13.5px;line-height:1.6;orphans:3;widows:3}
+    .doc ul,.doc ol{margin:0 0 10px;padding-left:20px}
+    .doc h1{margin:0 0 6px;font-family:var(--font-heading);font-weight:400;font-size:34px;line-height:1.1}
+    .doc h2{margin:28px 0 10px;font-family:var(--font-heading);font-weight:600;font-size:22px;padding-bottom:4px;border-bottom:1px solid var(--color-accent-500)}
+    .doc h3{margin:18px 0 6px;font-family:var(--font-heading);font-weight:600;font-size:17px;color:var(--color-accent-800)}
+    .doc .q{margin:12px 0 2px;font-weight:600;font-size:13.5px}
+    .doc .a{margin:0 0 6px;padding-left:14px;border-left:1px solid var(--color-accent-400);color:var(--color-neutral-800)}
+    .doc .card{break-inside:avoid;border:1px solid var(--color-divider);border-radius:var(--radius-md);padding:12px 14px;margin:6px 0 12px}
+    .doc table{width:100%;border-collapse:collapse;font-size:12.5px;margin:4px 0 12px}
+    .doc th{text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--color-text)}
+    .doc td{padding:6px 8px;border-bottom:1px solid var(--color-divider);vertical-align:top;line-height:1.45}
+  </style>
+</helmet>
+<doc-page size="a4" margin="0.8in">
+  <div class="doc" lang="fr" data-screen-label="Kit entretien" style="font-family:var(--font-body);color:var(--color-text)">
+    <h1>Kit entretien : pitch, questions-réponses, révisions</h1>
+    <p style="color:var(--color-neutral-700);font-size:13px">John Hoarau · postes calcul / simulation structures, aéro-spatial-défense · Septembre 2026. Tout ce qui suit s'appuie uniquement sur tes rapports et ton parcours réels. Là où un chiffre te manque (projet voilure), la réponse est écrite avec un blanc à remplir.</p>
+
+    <h2>1. Le pitch</h2>
+    <h3>Version 30 secondes (accroche, salon, téléphone)</h3>
+    <div class="card"><p>« Je suis John Hoarau, ingénieur généraliste ESTIA avec un MSc Cranfield en calcul scientifique. Mon métier, c'est le calcul de structures : j'ai justifié sept bâtiments acier aux Eurocodes sous ANSYS et Robot, puis j'ai passé un an sur des sujets aéro à Cranfield et à l'ESTIA : fuselage sous Abaqus, cuisson autoclave d'un stratifié carbone, optimisation de profil. J'ai fini par dimensionner et tester moi-même une voilure composite de drone. Je cherche un premier poste en bureau d'études calcul à Toulouse. »</p></div>
+
+    <h3>Version 2 minutes (« présentez-vous »)</h3>
+    <div class="card">
+      <p>« Je viens de La Réunion. Après une prépa au lycée Amiral Bouvet, je suis entré à l'ESTIA en 2022 pour une formation d'ingénieur généraliste, option procédés avancés de fabrication. En dernière année j'ai fait un double diplôme à Cranfield, MSc Computational and Software Techniques in Engineering, où j'ai travaillé sur Abaqus, Fluent et l'optimisation numérique.</p>
+      <p>Côté expérience, trois stages. Chez KOMPAÏ Robotics en 2023, un stage plutôt numérique : tests Python d'un robot autonome et déploiement d'un ERP. Chez CMR à La Réunion en 2025, le stage qui a fixé mon cap : quatre mois de calcul de structures, sept bâtiments industriels en charpente acier justifiés aux Eurocodes, calculs statiques, dynamiques et vent extrême sous ANSYS et Robot, avec les notes de calcul. Et depuis avril 2026 chez ALTEN à Toulouse, à la Direction de l'Innovation, deux projets R&amp;D menés seul : un score d'adéquation pour un jumeau numérique supply chain, et une pipeline de vision qui estime la capacité d'entrepôts depuis l'imagerie satellite.</p>
+      <p>Comme je n'avais pas d'expérience aéro directe, j'ai passé quatorze jours cet été sur un projet personnel : justifier un tronçon de voilure composite de drone tactique, du diagramme V-n à l'essai physique, avec CLT à la main, FEM coques, modale, random et une matrice de conformité. C'est ce que je veux faire : du calcul de structures dans un BE aéro ou défense, avec Python pour automatiser ce qui se répète. »</p>
+    </div>
+
+    <h3>Le fil rouge à défendre</h3>
+    <p>Si on te dit « votre parcours est éclectique » : « Le fil rouge, c'est comprendre comment un système physique se comporte et le prouver par le calcul. Une charpente acier aux Eurocodes et une nervure d'aile en CS-23, c'est la même logique : charges, hypothèses, modèle, marges, note justificative. Ce qui a changé, c'est la norme et le matériau, pas le métier. Et l'IA chez ALTEN, je la vois comme un outil pour aller plus vite en calcul, pas comme un métier à part. »</p>
+
+    <h2>2. Questions RH et comportementales</h2>
+    <p class="q">Pourquoi le calcul de structures et pas l'IA, où vous avez aussi une expérience ?</p>
+    <p class="a">« Chez CMR comme chez ALTEN, ce qui m'a plu c'est le travail technique de fond. Mais c'est en calcul que j'ai un objet réel au bout : une pièce qui doit tenir. Un modèle à 95 % que je n'explique pas ne me dérange pas comme outil ; comme métier, je préfère comprendre pourquoi une structure se comporte comme ça. Je garde l'IA dans ma boîte à outils, pour l'automatisation et les modèles de substitution. »</p>
+    <p class="q">Vous n'avez aucune expérience aéronautique.</p>
+    <p class="a">« Pas en entreprise, c'est vrai. J'ai comblé ça de deux façons : l'année Cranfield, tournée vers l'aéro (fuselage Abaqus, optimisation de profil avec XFOIL, CFD Fluent), et le projet voilure où j'ai appliqué CS-23, MIL-STD-810H et la CLT sur un cas complet. Je connais le vocabulaire : charge limite et extrême, coefficient 1,5, reserve factor, A- et B-basis, knock-down. Ce qui me manque, c'est vos méthodes internes, et ça s'apprend en BE. »</p>
+    <p class="q">Parlez-moi d'une difficulté technique et de comment vous l'avez résolue.</p>
+    <p class="a">Utilise la simulation autoclave : « Le degré de cuisson plafonnait à 91,6 % au lieu de 100 %. J'ai d'abord cherché une erreur de paramétrage, puis j'ai compris que c'était physique : la vitrification. Quand la Tg dépasse la température du palier à 180 °C, la mobilité des chaînes se bloque et la réaction s'arrête. Le modèle DiBenedetto le prévoit. La leçon : avant de corriger un modèle, vérifier si le résultat surprenant n'est pas simplement la physique. »</p>
+    <p class="q">Un exemple de travail en équipe, et un conflit.</p>
+    <p class="a">« Le projet de groupe à Cranfield : quatre personnes, deux pays, moi comme chef de projet. Les deux profils ENTP produisaient beaucoup d'idées et peu de documentation ; j'ai attribué la revue et la finition à la personne la plus rigoureuse, mis un Kanban sur Notion et un dépôt GitHub commun, et fixé des revues hebdomadaires. Le désaccord principal a porté sur l'algorithme à retenir : on a tranché par les chiffres, sur huit cas de test, plutôt que par préférence. BFGS l'a emporté. »</p>
+    <p class="q">Votre plus grande faiblesse ?</p>
+    <p class="a">« Je décroche sur le répétitif quand personne n'attend de livrable. Je le sais, donc je me fixe des jalons courts et je demande des points réguliers. Le projet voilure a été construit comme ça : un livrable par jour, un plafond d'heures par tâche. »</p>
+    <p class="q">Pourquoi nous (Airbus, Thales, Safran, ou un BE d'ingénierie) ?</p>
+    <p class="a">Prépare trois phrases par entreprise, factuelles : un programme ou produit que tu connais, ce que fait l'équipe visée, ce que tu apportes. Évite les compliments généraux. Pour un poste via ALTEN ou Capgemini Engineering : « je connais déjà le fonctionnement en mission depuis mon stage ».</p>
+    <p class="q">Où vous voyez-vous dans cinq ans ?</p>
+    <p class="a">« Ingénieur calcul confirmé sur une famille de pièces, avec des méthodes automatisées que j'aurai contribué à mettre en place. Ensuite, évoluer vers l'ingénierie système ou la coordination technique d'un lot, en gardant le calcul comme base. »</p>
+    <p class="q">Prétentions salariales ?</p>
+    <p class="a">« Pour un premier poste à Toulouse, 38 à 42 k€ de fixe, à discuter avec la rémunération globale. » Ne cite jamais ton minimum en premier.</p>
+    <p class="q">Êtes-vous à l'aise avec des programmes de défense ? Habilitation ?</p>
+    <p class="a">« Oui. Je suis de nationalité française, sans contrainte. Je sais que l'habilitation est demandée par l'employeur et prend quelques mois ; je peux démarrer sur des tâches non classifiées. »</p>
+
+    <h2>3. Questions techniques : tes projets</h2>
+    <h3>Stage CMR, charpentes acier</h3>
+    <p class="q">Quels cas de charge, quelles normes ?</p>
+    <p class="a">Eurocodes : EN 1990 (combinaisons), EN 1991 (actions dont vent et neige), EN 1993 (acier). Statique, dynamique, réponse cyclique, vent extrême. Profilés S235 et S355. ANSYS et Autodesk Robot, dessins AutoCAD et Tekla. Sache expliquer la différence ELU / ELS et pourquoi le vent dimensionne souvent une halle légère.</p>
+    <p class="q">Comment vérifiiez-vous un résultat de Robot ?</p>
+    <p class="a">Ordre de grandeur à la main sur une poutre isostatique équivalente (M = qL²/8), somme des réactions égale aux charges appliquées, déformée cohérente avec les appuis.</p>
+
+    <h3>Simulation autoclave AS4/8552 (ANSYS ACCS)</h3>
+    <p class="q">Décrivez la chaîne de calcul.</p>
+    <p class="a">Séquentiel : thermique transitoire avec source de chaleur réactionnelle (cinétique Kamal-Sourour, H_R = 540 kJ/kg), évolution de Tg par DiBenedetto, puis mécanique avec déformations thermiques et retrait chimique, démoulage. Éléments SOLID278 (thermique) et SOLID185 (mécanique). Trois plaques 250 × 250 × 3 mm : quasi-isotrope symétrique, UD, asymétrique. Cycle Hexcel : palier 120 °C puis 180 °C, h = 200 W/m²·K.</p>
+    <p class="q">Résultats et interprétation ?</p>
+    <p class="a">α final 91,6 %, Tg 183,2 °C. Spring-back : 0,0008 mm (P1), 0,0038 mm (P2), 56,5 mm (P3). L'asymétrie rend la matrice de couplage B non nulle : un chargement thermique ou chimique uniforme produit une courbure. C'est la règle de symétrie du drapage démontrée par le calcul. Limite : petites déformations, donc P3 à 56 mm est hors hypothèse et sert de tendance.</p>
+
+    <h3>Fuselage Abaqus</h3>
+    <p class="q">Pourquoi des coques S4R et des poutres B31 ?</p>
+    <p class="a">La peau et le plancher sont minces : coques à intégration réduite, cinq points d'intégration dans l'épaisseur pour la flexion. Cadres et lisses travaillent en flexion et traction le long d'un axe : poutres Timoshenko B31, plus économiques qu'un maillage coque des raidisseurs. Charges : pressurisation cabine et charge plancher passagers ; conditions de symétrie et blocage longitudinal. Étude de sensibilité au maillage à partir d'un seed 200 mm, puis deux variantes (plancher renforcé en charge, pression accrue).</p>
+    <p class="q">Contrainte dans une coque, où la lit-on ?</p>
+    <p class="a">Aux points d'intégration dans l'épaisseur (SNEG/SPOS), membrane plus flexion ; pour un critère de rupture on regarde la peau la plus sollicitée.</p>
+
+    <h3>Optimisation de profil (PSO, CST, XFOIL)</h3>
+    <p class="q">Comment marche votre PSO et comment l'avez-vous validé ?</p>
+    <p class="a">Chaque particule suit sa vitesse, son meilleur point et le meilleur global ; inertie décroissante pour passer de l'exploration à l'exploitation ; gestion des bornes. Validation sur Griewank, fonction multimodale à minimum global connu. Puis paramétrisation CST du profil, XFOIL en sous-processus, pénalité « death penalty » sur les géométries non convergées, formulation Pareto pour deux objectifs, étude de la taille de l'essaim. Enfin modèle de substitution et quantification d'incertitude pour une conception robuste. Limite XFOIL : modèle de transition e^N, non fiable au décrochage.</p>
+
+    <h3>Projet de groupe : tour de refroidissement</h3>
+    <p class="a">Dix troncs de cône, surface latérale à minimiser sous volume imposé 70 320 m³, pénalité quadratique. BFGS, PSO, recuit simulé sur huit cas. BFGS gagne en qualité et en temps (moins de 2 s en général) ; le recuit produit des profils en zigzag non physiques ; PSO respecte très bien la contrainte. Puis vérification Abaqus sous champ de pression vent 130 km/h asymétrique : le cas 8, régulier, tient mieux qu'un optimum géométrique extrême.</p>
+
+    <h3>CFD Fluent</h3>
+    <p class="a">Canal 2D avec obstacle, eau, 4 / 8 / 12 L/s, SST k-ω. Δp de 83,6 à 745,4 Pa, quadratique en vitesse comme attendu. Indépendance au maillage 1,44 % entre 13 580 et 54 118 cellules, GCI 0,60 %. Sache définir y⁺ et pourquoi SST plutôt que k-ε près d'un décollement.</p>
+
+    <h3>Projet voilure drone (à compléter avec tes chiffres)</h3>
+    <p class="a">Hypothèses : 15 kg, 3 m, croisière ~16 m/s (référence Delair DT26). V-n CS-23 : n = +3,8 / −1,52, V_D ≥ 1,25 V_C, extrême = 1,5 × limite. Charges XFLR5 (LLT/VLM), vérifiées par Schrenk. CLT : Q, Q̄, ABD, contraintes par pli, Tsai-Wu ; règles de drapage (symétrie, équilibre, 10 %). FEM coques ANSYS, flambement linéaire de la peau comprimée, modale, random MIL-STD-810H méthode 514 (RMS, 3σ, Miles), thermique du pod, Capella pour l'allocation d'exigences. Essai : raideur P/δ et modal par impact (ESP32, FFT). À écrire ici : RF mini = ____ ; écart CLT/FEM = ____ % ; raideur essai/FEM = ____ % ; f1 essai/calcul = ____ Hz / ____ Hz ; cause probable des écarts (encastrement réel, Vf, masse capteur).</p>
+
+    <h2>4. Fiche de révision calcul (les 25 questions qui tombent)</h2>
+    <table>
+      <thead><tr><th style="width:38%">Question</th><th>Réponse attendue</th></tr></thead>
+      <tbody>
+        <tr><td>Charge limite vs extrême</td><td>Limite = max en service ; extrême = 1,5 × limite, tenue 3 s sans rupture (CS-23.303 / CS-25.303).</td></tr>
+        <tr><td>Reserve factor, marge</td><td>RF = admissible / appliqué ; MS = RF − 1 ; OK si RF ≥ 1.</td></tr>
+        <tr><td>A-basis / B-basis</td><td>99 % / 90 % de la population au-dessus, confiance 95 % ; B si chemin de charge redondant.</td></tr>
+        <tr><td>Knock-down</td><td>Abattement des admissibles pour chaud/humide et dommages (AMC 20-29).</td></tr>
+        <tr><td>Matrice ABD</td><td>A membrane, D flexion, B couplage ; B = 0 si stratifié symétrique.</td></tr>
+        <tr><td>Tsai-Wu vs déformation max</td><td>Tsai-Wu quadratique interactif ; déformation max non interactif, lisible par mode.</td></tr>
+        <tr><td>Hashin, Puck</td><td>Critères par mode (fibre / matrice, traction / compression) ; Puck affine la rupture matrice par plan d'action.</td></tr>
+        <tr><td>Règles de drapage</td><td>Symétrie, équilibre ±θ, ≥ 10 % par direction, pas plus de 3-4 plis identiques adjacents.</td></tr>
+        <tr><td>Flambement de plaque</td><td>σ_cr = k·π²·E/(12(1−ν²))·(t/b)² ; piloté par t/b, E, conditions aux limites ; linéaire = optimiste.</td></tr>
+        <tr><td>Convergence de maillage</td><td>Raffiner jusqu'à variation &lt; ~5 % sur la grandeur d'intérêt ; GCI de Roache pour quantifier.</td></tr>
+        <tr><td>Coques vs solides</td><td>Coques pour stratifiés minces ; solides pour effets 3D locaux, délaminage, épaisseurs fortes.</td></tr>
+        <tr><td>Intégration réduite, hourglass</td><td>S4R : un point en plan, modes parasites contrôlés ; vérifier l'énergie artificielle.</td></tr>
+        <tr><td>Modale : à quoi ça sert</td><td>Éviter résonance et couplage ; base de la réponse dynamique et du flottement ; vérifier la masse effective.</td></tr>
+        <tr><td>Random 3σ, Miles</td><td>σ_RMS ≈ √(π/2 · f_n · Q · PSD) ; on dimensionne à 3σ (99,7 %).</td></tr>
+        <tr><td>Flottement</td><td>Couplage flexion-torsion instable ; marge V_flottement &gt; 1,15 V_D.</td></tr>
+        <tr><td>Fatigue : safe-life, fail-safe, damage tolerance</td><td>Durée sans fissure / chemins redondants / propagation contrôlée et inspections.</td></tr>
+        <tr><td>Matage, bearing / bypass</td><td>Pression de contact au trou ; vérifier bearing et bypass sur un assemblage boulonné.</td></tr>
+        <tr><td>Flux de cisaillement caisson</td><td>q = VQ/I pour l'effort tranchant ; Bredt q = T/(2A_m) pour la torsion.</td></tr>
+        <tr><td>SOL Nastran</td><td>101 statique, 103 modes, 105 flambement, 111 fréquentiel, 112 transitoire.</td></tr>
+        <tr><td>y⁺ en CFD</td><td>Distance paroi adimensionnée ; ~1 pour résoudre la couche limite (SST), 30-300 avec loi de paroi.</td></tr>
+        <tr><td>Pourquoi un calcul à la main</td><td>Ordre de grandeur, détection d'erreur de modèle, justification défendable.</td></tr>
+        <tr><td>Tg et composites</td><td>Au-delà de Tg la matrice perd ses propriétés ; marge Tg − T_service, chaud/humide abaisse Tg.</td></tr>
+        <tr><td>Spring-back</td><td>Déformation après démoulage due aux contraintes résiduelles thermiques et chimiques ; minimisé par symétrie.</td></tr>
+        <tr><td>CS-23 vs STANAG 4671</td><td>STANAG 4671 dérive de CS-23 pour UAV militaires 150-20 000 kg ; en dessous, cadre méthodologique.</td></tr>
+        <tr><td>Eurocodes vs aéro</td><td>Même logique charges / combinaisons / résistance / marges ; coefficients partiels côté génie civil, coefficient 1,5 côté aéro.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Tests psychotechniques et déroulé type</h2>
+    <p>Airbus utilise en général des tests type Aon/cut-e (numérique, logique inductive, verbal, jugement situationnel), Thales des tests SHL ou Saville, Safran des batteries similaires selon le poste. Demande toujours le nom de l'éditeur au recruteur, puis passe les tests d'exemple gratuits de cet éditeur : ce sont les formats exacts. Plan : une semaine de diagnostic (un test de chaque type), une semaine de technique (pourcentages, ratios, lecture de graphes en vitesse), une semaine en conditions réelles, une semaine sur le SJT et les récits STAR.</p>
+    <p>Déroulé typique : présélection RH téléphonique (pitch 2 min, mobilité, salaire, disponibilité), tests en ligne, entretien technique avec un ingénieur calcul senior (tes projets en détail, une ou deux questions de la fiche ci-dessus, parfois un exercice sur papier), entretien manager et RH. Pour une mission via une société d'ingénierie, ajoute l'entretien client.</p>
+
+    <h2>6. Tes questions à poser</h2>
+    <ul>
+      <li>Quelle part du poste est du calcul (modèle, notes) et quelle part de coordination ? Quels outils : Nastran, Abaqus, ANSYS, Hyperworks, outils internes ?</li>
+      <li>Comment sont organisés les jalons et les revues de calcul ? Qui vérifie et signe une note ?</li>
+      <li>Y a-t-il des sujets d'automatisation ou de méthodes en Python dans l'équipe ?</li>
+      <li>Quel parcours de formation interne pour un junior sur vos méthodes de justification ?</li>
+      <li>Pour un poste défense : délai d'habilitation, tâches possibles pendant l'attente.</li>
+    </ul>
+
+    <h2>7. Récits STAR prêts à l'emploi</h2>
+    <table>
+      <thead><tr><th style="width:22%">Situation</th><th>Tâche</th><th>Action</th><th>Résultat</th></tr></thead>
+      <tbody>
+        <tr><td>CMR, 7 bâtiments à justifier en 4 mois</td><td>Dimensionner et rédiger les notes</td><td>Modèles ANSYS/Robot, cas statiques, dynamiques, vent ; vérifications à la main ; choix S235/S355</td><td>Sept dossiers livrés, conformes Eurocodes, plus de 2,2 M$ de bâtiments</td></tr>
+        <tr><td>ALTEN, score d'adéquation à inventer</td><td>Comparer urgence déclarée et urgence réelle</td><td>Bibliographie, AHP et Fuzzy BWM, calibration bayésienne, propagation de risque multi-niveaux</td><td>Validé par un exercice de simulation structuré, livré seul</td></tr>
+        <tr><td>Autoclave, α bloqué à 91,6 %</td><td>Expliquer un résultat surprenant</td><td>Vérification paramétrage, puis analyse Tg/DiBenedetto</td><td>Vitrification identifiée ; règle de symétrie quantifiée (facteur 70 000 sur le spring-back)</td></tr>
+        <tr><td>Groupe Cranfield, 4 personnes, 2 pays</td><td>Livrer sept tâches dans les délais</td><td>Rôles Belbin, Kanban Notion, GitHub, revues hebdo, arbitrage par les chiffres</td><td>Tous les livrables rendus, BFGS retenu sur huit cas, vérification Abaqus</td></tr>
+        <tr><td>Voilure drone, zéro expérience aéro</td><td>Combler le trou en 14 jours</td><td>Timeboxing, chaîne complète exigences → essai, CLT à la main puis FEM</td><td>Dossier, matrice de conformité, essai corrélé (chiffres à insérer)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</doc-page>
+</x-dc>
+</body>
+</html>

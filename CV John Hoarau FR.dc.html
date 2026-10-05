@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined){visibility:hidden}
+    body{margin:0;font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .cv p,.cv li{margin:0;orphans:3;widows:3}
+    .cv ul{margin:0;padding-left:13px}
+    .cv li{padding-left:2px}
+    .cv li::marker{color:var(--color-accent)}
+    .cv h2{margin:0;font-family:var(--font-heading);font-weight:600;color:var(--color-accent-700)}
+    .cv .side h2{font-size:17px;line-height:1.1}
+    .cv .side .lbl{font-weight:600;color:var(--color-accent-800);font-size:10px;letter-spacing:0.02em}
+    .cv .main h2{font-size:21px;line-height:1.1;display:flex;align-items:center;gap:10px}
+    .cv .main h2 span{flex:1;height:2px;border-radius:999px;background:var(--color-accent-400)}
+    .cv .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+    .cv .ttl{font-weight:600;font-size:11.4px;line-height:1.3}
+    .cv .date{color:var(--color-neutral-700);white-space:nowrap;font-size:10.2px;font-variant-numeric:tabular-nums}
+    .cv .txt{text-wrap:pretty;hyphens:auto}
+  </style>
+</helmet>
+<doc-page size="a4">
+  <section class="page cv" id="p1" data-screen-label="CV FR" lang="fr">
+    <div style="position:absolute;inset:0;background:#ffffff;display:grid;grid-template-rows:auto 1fr;row-gap:16px;padding:28px 32px 28px 32px;box-sizing:border-box;font-family:var(--font-body);font-size:10.9px;line-height:1.42;overflow:hidden">
+      <div style="position:absolute;top:-110px;right:-70px;width:270px;height:270px;border-radius:999px;background:var(--color-accent-100)"></div>
+      <div style="position:absolute;top:72px;right:-46px;width:110px;height:110px;border-radius:999px;background:var(--color-accent-300)"></div>
+
+      <header style="position:relative;display:grid;grid-template-columns:214px 1fr;column-gap:24px;align-items:center">
+        <div style="width:124px;height:124px;border-radius:999px;background:var(--color-accent);padding:5px;box-sizing:border-box">
+          <img src="assets/john-photo.jpg" alt="John Hoarau" style="width:100%;height:100%;border-radius:999px;object-fit:cover;display:block">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h1 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:46px;line-height:0.95;color:var(--color-text)">John Hoarau</h1>
+          <p style="font-family:var(--font-heading);font-weight:600;font-size:18px;line-height:1.15;color:var(--color-accent-700)">Ingénieur calcul &amp; simulation structures</p>
+          <p style="font-size:12px;line-height:1.3;color:var(--color-neutral-700)">FEA · composites · CFD · Python appliqué au calcul</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:2px">
+            <span style="background:var(--color-neutral-900);color:var(--color-accent-300);border-radius:999px;padding:3px 10px;font-size:9.4px;font-weight:600">Jeune diplômé ESTIA × Cranfield MSc</span>
+            <span style="background:var(--color-neutral-900);color:var(--color-accent-300);border-radius:999px;padding:3px 10px;font-size:9.4px;font-weight:600">Disponible octobre 2026</span>
+            <span style="background:var(--color-neutral-900);color:var(--color-accent-300);border-radius:999px;padding:3px 10px;font-size:9.4px;font-weight:600">Mobile France</span>
+          </div>
+        </div>
+      </header>
+
+      <div style="position:relative;display:grid;grid-template-columns:214px 1fr;column-gap:24px;min-height:0">
+        <aside class="side" style="background:var(--color-accent-100);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:16px;font-size:10.2px;line-height:1.42;min-height:0;align-self:stretch">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h2 style="margin-bottom:3px">Contact</h2>
+            <p>+33 7 57 67 13 75</p>
+            <p><a href="mailto:john.hoarau@etu.estia.fr">john.hoarau@etu.estia.fr</a></p>
+            <p><a href="https://www.linkedin.com/in/john-hoarau">linkedin.com/in/john-hoarau</a></p>
+            <p>31300 Toulouse</p>
+            <p>Nationalité française</p>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h2>Compétences</h2>
+            <div><p class="lbl">Calcul &amp; simulation</p><p>ANSYS Mechanical (ACCS, modal, random), ANSYS CFX, ANSYS Fluent, Abaqus, Autodesk Robot, XFLR5, XFOIL</p></div>
+            <div><p class="lbl">Méthodes</p><p>Eurocodes, CS-23, MIL-STD-810H, théorie des stratifiés (ABD), Tsai-Wu, Hashin, Puck, convergence de maillage, GCI</p></div>
+            <div><p class="lbl">Programmation</p><p>Python (NumPy, SciPy, PyTorch, OpenCV, scikit-learn), MATLAB/Simulink, C++, Git</p></div>
+            <div><p class="lbl">Optimisation &amp; données</p><p>PSO, recuit simulé, BFGS, modèles de substitution, AHP, Fuzzy BWM, calibration bayésienne</p></div>
+            <div><p class="lbl">CAO &amp; BE</p><p>CATIA V5/V6, SolidWorks, Onshape, AutoCAD, Tekla Structures, Capella (Arcadia)</p></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h2>Formation</h2>
+            <div><p class="lbl">Cranfield University · 2025–2026</p><p>MSc Computational and Software Techniques in Engineering, double diplôme</p></div>
+            <div><p class="lbl">ESTIA, Bidart · 2022–2026</p><p>Diplôme d'ingénieur généraliste, option Procédés avancés de fabrication</p></div>
+            <div><p class="lbl">VŠB-TU Ostrava · févr.–juin 2025</p><p>Erasmus, Nuclear Engineering</p></div>
+            <div><p class="lbl">Lycée Amiral Bouvet, La Réunion · 2020–2022</p><p>Classe préparatoire</p></div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h2 style="margin-bottom:3px">Langues &amp; divers</h2>
+            <p>Français natif · Anglais courant (IELTS) · Espagnol et chinois, notions</p>
+            <p>Premier prix WebCup junior Réunion · Premier Secours en Santé Mentale</p>
+          </div>
+        </aside>
+
+        <main class="main" style="display:flex;flex-direction:column;gap:15px;min-width:0">
+          <p class="txt" style="font-size:11.3px;line-height:1.5">Ingénieur généraliste formé au calcul de structures et à la simulation (ANSYS, Abaqus, Fluent, CFX), Python pour automatiser les calculs. Sept bâtiments acier justifiés aux Eurocodes, deux projets R&amp;D menés seul chez ALTEN, une voilure composite de drone dimensionnée et testée. <b>Objectif</b> : un poste en bureau d'études calcul, aéronautique, spatial ou défense.</p>
+
+          <section style="display:flex;flex-direction:column;gap:11px">
+            <h2>Expériences <span></span></h2>
+            <article style="display:flex;flex-direction:column;gap:5px">
+              <div class="row"><p class="ttl">ALTEN SO, Toulouse · Stage R&amp;D, Innovation</p><p class="date">avr. – oct. 2026</p></div>
+              <ul style="display:flex;flex-direction:column;gap:2px">
+                <li class="txt">Score d'adéquation pour un jumeau numérique supply chain : urgence déclarée par l'opérateur comparée à une urgence calculée sur les KPI (AHP, Fuzzy BWM, calibration bayésienne, propagation de risque multi-niveaux). Validé par un exercice de simulation.</li>
+                <li class="txt">Estimation de la capacité de stockage d'entrepôts depuis l'imagerie satellite : segmentation YOLO affinée, puis règles géométriques pour déduire volume, quais et débit.</li>
+                <li>Deux projets menés seul, de la modélisation mathématique au code livré et validé.</li>
+              </ul>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:5px">
+              <div class="row"><p class="ttl">CMR, La Réunion · Stage calcul de structures</p><p class="date">juin – sept. 2025</p></div>
+              <ul style="display:flex;flex-direction:column;gap:2px">
+                <li>Analyse EF de 7 bâtiments industriels en charpente acier (2,2 M$), justifiés aux Eurocodes.</li>
+                <li>Calculs statiques, dynamiques, cycliques et vent extrême sous ANSYS et Autodesk Robot ; choix des profilés S235/S355.</li>
+                <li>Notes de calcul ; plans sous AutoCAD et Tekla Structures.</li>
+              </ul>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:5px">
+              <div class="row"><p class="ttl">KOMPAÏ Robotics, Bidart · Stage projet numérique</p><p class="date">janv. – mars 2023</p></div>
+              <ul><li>Procédure de test Python d'un robot autonome (50 h de données, 2 bugs critiques corrigés) ; déploiement Odoo ERP/CRM.</li></ul>
+            </article>
+          </section>
+
+          <section style="display:flex;flex-direction:column;gap:10px">
+            <h2>Projets <span></span></h2>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Voilure composite de drone tactique · projet personnel</p><p class="date">sept. 2026</p></div>
+              <p class="txt">Tronçon de voilure d'un drone de 15 kg justifié de l'exigence à l'essai en 14 jours : V-n CS-23 (+3,8 / −1,52, extrême ×1,5), charges XFLR5, stratifié dimensionné en CLT (ABD, Tsai-Wu, Python) puis en coques ANSYS (flambement, modale, random MIL-STD-810H), exigences sous Capella. Tronçon fabriqué, testé en raideur et en modal (ESP32, FFT), corrélé au calcul. Dossier et matrice de conformité.</p>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Simulation CFD d'une turbomachine axiale à 4 étages · ESTIA</p><p class="date">mars 2026</p></div>
+              <p class="txt">ANSYS CFX 2024 R2, RANS compressible SST k-ω, énergie totale, 1,83 M de tétraèdres ; air à −40 °C à 1 000 km/h, ailettes à 450 °C. Non-convergence expliquée par la gaz dynamique (Mach d'entrée 0,993, blocage sonique), pas par un défaut numérique ; conditions aux limites corrigées proposées. Pré-analyse thermo-élastique justifiant une FSI à sens unique (dilatation libre 0,26 mm, 1,47 GPa si bridée).</p>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Simulation de cuisson autoclave d'un CFRP · ESTIA</p><p class="date">mars 2026</p></div>
+              <p class="txt">ANSYS Mechanical 2024 R2 + ACCS, stratifié Hexcel AS4/8552, cinétique Kamal-Sourour et Tg DiBenedetto, trois empilements. Cuisson finale 91,6 %, Tg 183 °C ; spring-back de 0,0008 mm en symétrique contre 56,5 mm en asymétrique.</p>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Analyse EF d'un tronçon de fuselage · Cranfield</p><p class="date">févr. 2026</p></div>
+              <p class="txt">Abaqus, coques S4R (peau, plancher) et poutres B31 (cadres, lisses), pressurisation cabine et charge plancher, symétrie. Sensibilité au maillage, deux variantes de chargement.</p>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Optimisation de profil aérodynamique · Cranfield</p><p class="date">janv. 2026</p></div>
+              <p class="txt">Solveur PSO écrit en Python et validé sur Griewank ; paramétrisation CST et automatisation XFOIL ; formulation Pareto ; modèle de substitution avec quantification d'incertitude.</p>
+            </article>
+            <article style="display:flex;flex-direction:column;gap:3px">
+              <div class="row"><p class="ttl">Chef de projet, optimisation d'une tour de refroidissement</p><p class="date">2025 – 2026</p></div>
+              <p class="txt">Équipe de 4 (Cranfield/ESTIA) dirigée à distance : planning, Notion, GitHub, rapports. BFGS, PSO et recuit simulé comparés sur 8 cas (volume imposé 70 320 m³), puis vérification Abaqus sous vent à 130 km/h.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </section>
+</doc-page>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { this._nudge(0); }
+  _nudge(n) {
+    const dp = document.querySelector('doc-page');
+    const sheet = dp && dp.shadowRoot && dp.shadowRoot.querySelector('.sheet');
+    if (sheet && dp.querySelector(':scope > .page') && !sheet.classList.contains('paginated') && typeof dp._measure === 'function') dp._measure();
+    if (n < 12) setTimeout(() => this._nudge(n + 1), 250);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

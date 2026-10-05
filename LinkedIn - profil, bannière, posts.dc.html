@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <style>
+    body{margin:0;background:var(--color-bg);font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .kit p{margin:0}
+    .kit h1{margin:0;font-family:var(--font-heading);font-weight:400;font-size:40px;line-height:1.05}
+    .kit h2{margin:0;font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.1;padding-bottom:6px;border-bottom:1px solid var(--color-accent-500)}
+    .kit h3{margin:0;font-family:var(--font-heading);font-weight:600;font-size:19px;line-height:1.15;color:var(--color-accent-800)}
+    .kit .blk{border:1px solid var(--color-divider);border-radius:var(--radius-md);background:#fff;padding:18px 20px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.55}
+    .kit .blk p.l{margin:0}
+    .kit .meta{font-size:12.5px;color:var(--color-neutral-700);font-variant-numeric:tabular-nums}
+    .kit .note{font-size:13px;color:var(--color-neutral-800);padding-left:12px;border-left:1px solid var(--color-accent-400)}
+    .kit ul{margin:0;padding-left:18px}
+    .kit li{margin:0 0 4px;font-size:14.5px;line-height:1.5}
+    .kit .btn{font-family:var(--font-body)}
+    .kit table{width:100%;border-collapse:collapse;font-size:13.5px}
+    .kit th{text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--color-text)}
+    .kit td{padding:6px 8px;border-bottom:1px solid var(--color-divider);vertical-align:top;line-height:1.45}
+  </style>
+</helmet>
+<div class="kit" lang="fr" data-screen-label="Kit LinkedIn" style="max-width:980px;margin:0 auto;padding:40px 24px 72px;display:flex;flex-direction:column;gap:36px">
+
+  <header style="display:flex;flex-direction:column;gap:8px">
+    <h1>LinkedIn : bannière, profil réécrit, posts</h1>
+    <p style="font-size:15px;color:var(--color-neutral-700);text-wrap:pretty">Tout est copiable tel quel. Les compteurs indiquent les limites réelles de LinkedIn (titre 220, À propos 2 600, post 3 000) et ce qui reste visible avant « voir plus ». Aucun chiffre inventé : là où il manque une donnée du projet voilure, une note te dit quoi ajouter.</p>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>1. Bannière de couverture (1584 × 396)</h2>
+    <p style="font-size:14.5px;line-height:1.55;text-wrap:pretty">Je ne peux pas produire de photo. Voici une bannière typographique dans la même écriture que ton CV, exportée en PNG à la taille exacte. Le texte est placé dans la zone sûre : moitié haute, côté droit. Le bas gauche reste vide parce que ta photo de profil le recouvre sur ordinateur et sur mobile. Si tu préfères une photo (banc d'essai, atelier composite, maquette), garde la même règle : rien d'important en bas à gauche.</p>
+    <div id="bannerWrap" style="width:100%;overflow:hidden;border:1px solid var(--color-divider);background:var(--color-surface);height:{{ bannerH }}px">
+      <div style="transform:scale({{ bannerScale }});transform-origin:top left;width:1584px">
+        <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}">
+          <div id="banner-light" style="width:1584px;height:396px;background:#ffffff;position:relative;overflow:hidden;font-family:var(--font-body);color:var(--color-text)">
+            <div style="position:absolute;left:0;right:0;top:0;height:8px;background:var(--color-accent)"></div>
+            <div style="position:absolute;right:120px;top:94px;width:960px;display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:14px">
+              <p style="font-family:var(--font-heading);font-weight:500;font-size:88px;line-height:0.95">John Hoarau</p>
+              <div style="width:220px;height:2px;background:var(--color-accent)"></div>
+              <p style="font-family:var(--font-heading);font-weight:600;font-size:38px;line-height:1.1;color:var(--color-accent-700)">Ingénieur calcul &amp; simulation structures</p>
+              <p style="font-size:24px;line-height:1.3;color:var(--color-neutral-700);letter-spacing:0.02em">FEA · Composites · CFD · Python appliqué au calcul &nbsp;|&nbsp; ESTIA × Cranfield MSc</p>
+            </div>
+            <sc-if value="{{ showZones }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;left:0;bottom:0;width:568px;height:264px;border:2px dashed var(--color-accent-600);box-sizing:border-box;display:flex;align-items:flex-end;justify-content:flex-end;padding:8px;font-size:18px;color:var(--color-accent-700)">zone recouverte par la photo de profil</div>
+              <div style="position:absolute;left:117px;top:88px;width:1350px;height:220px;border:2px dashed var(--color-neutral-600);box-sizing:border-box;display:flex;align-items:flex-start;padding:8px;font-size:18px;color:var(--color-neutral-700)">zone visible sur mobile</div>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ isDark }}" hint-placeholder-val="{{ false }}">
+          <div id="banner-dark" style="width:1584px;height:396px;background:var(--color-neutral-900);position:relative;overflow:hidden;font-family:var(--font-body);color:var(--color-bg)">
+            <div style="position:absolute;left:0;right:0;top:0;height:8px;background:var(--color-accent)"></div>
+            <div style="position:absolute;right:120px;top:94px;width:960px;display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:14px">
+              <p style="font-family:var(--font-heading);font-weight:500;font-size:88px;line-height:0.95">John Hoarau</p>
+              <div style="width:220px;height:2px;background:var(--color-accent)"></div>
+              <p style="font-family:var(--font-heading);font-weight:600;font-size:38px;line-height:1.1;color:var(--color-accent-400)">Ingénieur calcul &amp; simulation structures</p>
+              <p style="font-size:24px;line-height:1.3;color:var(--color-neutral-300);letter-spacing:0.02em">FEA · Composites · CFD · Python appliqué au calcul &nbsp;|&nbsp; ESTIA × Cranfield MSc</p>
+            </div>
+            <sc-if value="{{ showZones }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;left:0;bottom:0;width:568px;height:264px;border:2px dashed var(--color-accent-400);box-sizing:border-box;display:flex;align-items:flex-end;justify-content:flex-end;padding:8px;font-size:18px;color:var(--color-accent-300)">zone recouverte par la photo de profil</div>
+              <div style="position:absolute;left:117px;top:88px;width:1350px;height:220px;border:2px dashed var(--color-neutral-400);box-sizing:border-box;display:flex;align-items:flex-start;padding:8px;font-size:18px;color:var(--color-neutral-300)">zone visible sur mobile</div>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <p class="meta">Variante claire ou sombre et affichage des zones sûres : panneau Tweaks. Fichiers PNG : <a href="assets/linkedin-banner-clair.png">linkedin-banner-clair.png</a> · <a href="assets/linkedin-banner-sombre.png">linkedin-banner-sombre.png</a>. Photo de profil : garde la photo actuelle, cadrée aux épaules, fond uni ; téléverse-la en 400 × 400 minimum.</p>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>2. Titre du profil</h2>
+    <div class="blk">
+      <div id="headline"><p>Ingénieur calcul &amp; simulation structures | Stress &amp; Simulation Engineer | FEA · Composites · CFD · Python | ESTIA × Cranfield MSc | Disponible octobre 2026 · Mobile France</p></div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyHeadline }}">Copier</button>
+        <span class="meta">{{ headlineCount }} {{ copiedHeadline }}</span>
+      </div>
+    </div>
+    <p class="note">Le titre actuel (« Engineering Student … R&amp;D Intern @ALTEN … Digital Twins &amp; AI Vision ») te positionne en IA, pas en calcul. Les 60 à 70 premiers caractères sont ceux que les recruteurs lisent dans les résultats de recherche : ils portent maintenant le métier visé, en français puis en anglais pour couvrir les deux vocabulaires de recherche.</p>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>3. À propos (Infos)</h2>
+    <h3>Version française (profil principal)</h3>
+    <div class="blk">
+      <div id="aboutFr">
+        <p>Ingénieur calcul et simulation, jeune diplômé de l'ESTIA (ingénieur généraliste) et de Cranfield University (MSc Computational and Software Techniques in Engineering). Je cherche un premier poste en bureau d'études calcul dans l'aéronautique, le spatial ou la défense, dès octobre 2026, en France.</p>
+        <p>Ce que je sais faire :</p>
+        <p class="l">• Calcul de structures par éléments finis : ANSYS Mechanical, Abaqus, Autodesk Robot. Statique, flambement linéaire, modal, réponse aléatoire, thermique.</p>
+        <p class="l">• Composites : théorie des stratifiés (matrice ABD), critères Tsai-Wu, Hashin et Puck ; simulation de cuisson autoclave (ANSYS ACCS).</p>
+        <p class="l">• CFD : ANSYS Fluent, études de convergence de maillage (GCI).</p>
+        <p class="l">• Python appliqué au calcul : solveurs d'optimisation écrits et validés (PSO, recuit simulé, BFGS), modèles de substitution, quantification d'incertitude, automatisation de XFOIL.</p>
+        <p class="l">• Normes et méthodes : Eurocodes, CS-23, MIL-STD-810H, matrice de conformité, Capella (Arcadia).</p>
+        <p>Ce que j'ai fait :</p>
+        <p class="l">• CMR, La Réunion (2025) : dimensionnement et justification aux Eurocodes de 7 bâtiments industriels en charpente acier, notes de calcul, ANSYS et Robot.</p>
+        <p class="l">• ALTEN, Direction de l'Innovation, Toulouse (2026) : deux projets R&amp;D menés seul, un score d'adéquation pour un jumeau numérique supply chain (AHP, Fuzzy BWM, calibration bayésienne) et une chaîne de vision sur imagerie satellite (segmentation YOLO).</p>
+        <p class="l">• Projet personnel (2026) : voilure composite d'un drone tactique de 15 kg, du diagramme V-n CS-23 jusqu'aux essais de raideur et modal sur un tronçon fabriqué, corrélés au calcul.</p>
+        <p class="l">• Cranfield : tronçon de fuselage sous Abaqus, optimisation de profil PSO + XFOIL, CFD Fluent ; chef d'un projet de groupe à quatre, réparti sur deux pays.</p>
+        <p>Ma façon de travailler : hypothèses écrites, vérification à la main avant le modèle, écart quantifié, conclusion défendable. Python pour tout ce qui se répète.</p>
+        <p>Langues : français (natif), anglais courant (IELTS, MSc suivi en anglais), espagnol et chinois (notions).</p>
+        <p>Contact : john.hoarau@etu.estia.fr</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyAboutFr }}">Copier</button>
+        <span class="meta">{{ aboutFrCount }} · accroche visible avant « voir plus » : {{ aboutFrHook }} {{ copiedAboutFr }}</span>
+      </div>
+    </div>
+    <h3>English version (secondary profile language)</h3>
+    <div class="blk" lang="en-GB">
+      <div id="aboutEn">
+        <p>Graduate stress and simulation engineer, ESTIA (Diplôme d'Ingénieur, MEng level) and Cranfield University (MSc Computational and Software Techniques in Engineering). Looking for a first stress or simulation engineering role in aerospace, space or defence, from October 2026, in France.</p>
+        <p>What I do:</p>
+        <p class="l">• Finite element analysis: ANSYS Mechanical, Abaqus, Autodesk Robot. Static, linear buckling, modal, random vibration, thermal.</p>
+        <p class="l">• Composites: classical laminate theory (ABD matrix), Tsai-Wu, Hashin and Puck criteria; autoclave cure simulation (ANSYS ACCS).</p>
+        <p class="l">• CFD: ANSYS Fluent, grid convergence studies (GCI).</p>
+        <p class="l">• Python for calculation work: optimisers written and validated (PSO, simulated annealing, BFGS), surrogate models, uncertainty quantification, XFOIL automation.</p>
+        <p class="l">• Standards and methods: Eurocodes, CS-23, MIL-STD-810H, compliance matrices, Capella (Arcadia).</p>
+        <p>What I have done:</p>
+        <p class="l">• CMR, La Réunion (2025): sized and justified 7 industrial steel buildings to the Eurocodes; calculation reports; ANSYS and Robot.</p>
+        <p class="l">• ALTEN Innovation Department, Toulouse (2026): two R&amp;D projects run on my own, a cognitive adequacy score for a supply-chain digital twin (AHP, Fuzzy BWM, Bayesian calibration) and a satellite-imagery vision pipeline (YOLO segmentation).</p>
+        <p class="l">• Personal project (2026): composite wing section for a 15 kg tactical UAV, from the CS-23 V-n diagram to stiffness and modal tests on a built section, correlated with the FE model.</p>
+        <p class="l">• Cranfield: fuselage section in Abaqus, aerofoil optimisation with PSO and XFOIL, Fluent CFD; led a four-person group project across two countries.</p>
+        <p>How I work: written assumptions, a hand calculation before the model, quantified discrepancies, a conclusion I can defend. Python for whatever repeats.</p>
+        <p>Languages: French (native), English (full professional proficiency, IELTS; MSc taught in English), Spanish and Mandarin (elementary).</p>
+        <p>Contact: john.hoarau@etu.estia.fr</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyAboutEn }}">Copier</button>
+        <span class="meta">{{ aboutEnCount }} · hook before “see more”: {{ aboutEnHook }} {{ copiedAboutEn }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>4. Expériences (2 000 caractères max par poste)</h2>
+    <p class="note">Intitulés à corriger : « R&amp;D Engineer » chez ALTEN est un stage, écris-le. Un recruteur qui découvre l'écart en entretien ne te le pardonne pas ; « stagiaire » avec deux projets livrés seul est plus fort qu'un titre gonflé. Type d'emploi LinkedIn : « Stage ».</p>
+    <div class="blk">
+      <p style="font-weight:600">Stagiaire ingénieur R&amp;D, Direction de l'Innovation (jumeaux numériques &amp; IA) · ALTEN SO, Toulouse · avr. 2026 – oct. 2026</p>
+      <p class="l">• Score d'adéquation pour un jumeau numérique supply chain : l'urgence déclarée par l'opérateur est comparée à une urgence calculée en direct sur les KPI (AHP, Fuzzy Best-Worst Method, calibration bayésienne, propagation de risque sur un réseau fournisseurs multi-niveaux). Livré et validé par un exercice de simulation structuré.</p>
+      <p class="l">• Chaîne de vision estimant la capacité de stockage d'entrepôts depuis l'imagerie satellite : fine-tuning d'un modèle de segmentation YOLO, puis règles géométriques pour déduire volume, quais et débit sans visite de site.</p>
+      <p class="l">• Les deux projets menés seul, de la bibliographie et de la modélisation mathématique jusqu'au code livré et validé.</p>
+    </div>
+    <div class="blk">
+      <p style="font-weight:600">Stagiaire calcul de structures · CMR, Steel and Metal Construction Réunion · juin – sept. 2025</p>
+      <p class="l">• Dimensionnement et analyse éléments finis de 7 bâtiments industriels en charpente acier (plus de 2,2 M$), justifiés aux Eurocodes.</p>
+      <p class="l">• Calculs statiques, dynamiques, cycliques et vent extrême sous ANSYS et Autodesk Robot ; choix des profilés S235/S355.</p>
+      <p class="l">• Notes de calcul rédigées ; plans sous AutoCAD et Tekla Structures.</p>
+    </div>
+    <div class="blk">
+      <p style="font-weight:600">Stagiaire projet numérique · KOMPAÏ Robotics, Bidart · janv. – mars 2023</p>
+      <p class="l">• Procédure de test Python d'un robot d'assistance autonome : 50 h de données d'exploitation, deux bugs critiques identifiés et corrigés.</p>
+      <p class="l">• Déploiement et configuration d'Odoo (ERP/CRM), saisie manuelle réduite d'environ 20 % ; optimisation front-end et requêtes des sites web, temps de chargement moyen réduit de 28 %.</p>
+    </div>
+    <p class="meta">Versions anglaises : reprends mot pour mot les puces du CV UK (fichier « CV John Hoarau UK »).</p>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>5. Formation, projets, compétences, sélection</h2>
+    <h3>Formation (corrections)</h3>
+    <table>
+      <thead><tr><th style="width:34%">Établissement</th><th>À écrire</th></tr></thead>
+      <tbody>
+        <tr><td>Cranfield University</td><td>MSc Computational and Software Techniques in Engineering · oct. 2025 – juin 2026 · double diplôme avec l'ESTIA. Modules : Computational Engineering Structures, Computational Engineering Fluids, Computational Optimisation Design, Digital Engineering Design (projet de groupe).</td></tr>
+        <tr><td>ESTIA</td><td>Diplôme d'ingénieur généraliste, option Procédés avancés de fabrication · 2022 – 2026. Remplace « Master of General Engineering, Ingénierie ».</td></tr>
+        <tr><td>VŠB-TU Ostrava</td><td>Semestre Erasmus, Nuclear Engineering · févr. – juin 2025.</td></tr>
+        <tr><td>Lycée Amiral Bouvet</td><td>Classe préparatoire aux grandes écoles, mathématiques et physique · 2020 – 2022. Corrige « Ecole préparatoire au grande école ».</td></tr>
+        <tr><td>Lycée de Trois-Bassins</td><td>Baccalauréat STI2D · 2017 – 2020. À garder court, ou à retirer : il n'apporte rien à un recruteur calcul.</td></tr>
+      </tbody>
+    </table>
+    <h3>Section Projets (à créer)</h3>
+    <table>
+      <thead><tr><th style="width:34%">Titre · date</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Voilure composite d'un drone tactique · sept. 2026</td><td>Tronçon de voilure pour un drone de 15 kg justifié de l'exigence à l'essai en 14 jours : V-n CS-23, charges XFLR5, stratifié CLT à la main puis coques ANSYS (flambement, modal, random MIL-STD-810H), Capella, tronçon fabriqué et testé en raideur et en modal, corrélé au modèle. Dossier de justification et matrice de conformité.</td></tr>
+        <tr><td>Simulation de cuisson autoclave d'un CFRP · mars 2026</td><td>ANSYS Mechanical + ACCS, stratifié Hexcel AS4/8552, cinétique Kamal-Sourour, Tg DiBenedetto, trois empilements. Degré de cuisson 91,6 %, Tg 183 °C ; spring-back 0,0008 mm (symétrique) contre 56,5 mm (asymétrique).</td></tr>
+        <tr><td>Analyse EF d'un tronçon de fuselage · févr. 2026</td><td>Abaqus, coques S4R et poutres B31, pressurisation cabine et charge plancher, sensibilité au maillage, deux variantes de chargement.</td></tr>
+        <tr><td>Optimisation de profil aérodynamique · janv. 2026</td><td>Solveur PSO écrit en Python, validé sur Griewank ; paramétrisation CST, XFOIL automatisé, formulation Pareto, modèle de substitution avec quantification d'incertitude.</td></tr>
+        <tr><td>Chef de projet, optimisation d'une tour de refroidissement · nov. 2025 – mars 2026</td><td>Équipe de quatre entre Cranfield et l'ESTIA ; BFGS, PSO et recuit simulé comparés sur huit cas ; vérification Abaqus sous vent à 130 km/h.</td></tr>
+      </tbody>
+    </table>
+    <h3>Compétences : les 5 à épingler, dans cet ordre</h3>
+    <p style="font-size:14.5px;line-height:1.55">Finite Element Analysis (FEA) · ANSYS · Abaqus · Structures composites · Python. Ensuite : CFD, ANSYS Fluent, CATIA V5, Optimisation numérique, Eurocodes. Les trois compétences actuellement en tête (Jumeaux numériques, Vision par ordinateur, IA) descendent en fin de liste : elles restent vraies mais ne doivent pas définir le profil.</p>
+    <h3>Sélection (Featured)</h3>
+    <ul>
+      <li>Le post sur la voilure drone (section 6), une fois publié.</li>
+      <li>Un PDF de deux pages résumant le projet voilure : hypothèses, modèle, essai, écart. Un extrait du rapport autoclave fait aussi une bonne pièce.</li>
+      <li>Le lien GitHub du solveur PSO si le dépôt est propre (README, un exemple qui tourne).</li>
+    </ul>
+    <h3>Réglages</h3>
+    <ul>
+      <li>URL personnalisée : déjà bonne (linkedin.com/in/john-hoarau). Localisation : « France » plutôt que « Greater Toulouse », cohérent avec le CV.</li>
+      <li>Open to Work : active-le. Intitulés (5 max) : Ingénieur calcul de structures · Ingénieur simulation numérique · Stress Engineer · Ingénieur d'études calcul · Graduate Structural Engineer. Lieux : Toulouse, Paris et Île-de-France, Bordeaux, plus « France ». Début : octobre 2026.</li>
+      <li>Visibilité : « Recruteurs uniquement » est le choix sobre. Le cadre vert public augmente les contacts recruteurs mais garde une image négative chez une partie des recruteurs en cabinet ; pour un jeune diplômé sans poste à protéger, il est peu risqué. Voir les sources en bas.</li>
+      <li>Adresse e-mail : les deux adresses actuelles sont universitaires et expireront. Crée une adresse personnelle sobre avant de publier.</li>
+    </ul>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2>6. Posts</h2>
+    <p style="font-size:14.5px;line-height:1.55;text-wrap:pretty">Mécanique du fil d'actualité : seuls les 140 premiers caractères environ sont visibles sur mobile (210 sur ordinateur) avant « voir plus », donc la première ligne fait tout le travail. Les analyses 2025-2026 convergent sur une longueur de 1 300 à 2 500 caractères pour un post texte ; en dessous de 400, l'engagement chute. Trois à cinq hashtags, pas plus. Une image par post : pour le post A, la photo du tronçon sur le banc d'essai ; pour le post B, ta photo de profil ou une photo de Cranfield.</p>
+
+    <h3>Post A · le projet voilure (à publier en premier)</h3>
+    <div class="blk">
+      <div id="postA">
+        <p>Quatorze jours pour dimensionner, fabriquer et tester un tronçon de voilure composite de drone. Projet personnel, terminé.</p>
+        <p>Le point de départ : un drone tactique de 15 kg et 3 m d'envergure, et une question simple. Est-ce que je sais justifier une pièce volante de bout en bout, pas seulement calculer une contrainte ?</p>
+        <p>Ce que ça a donné, dans l'ordre :</p>
+        <p class="l">– diagramme V-n selon CS-23 (n = +3,8 / −1,52), charge extrême = 1,5 × limite</p>
+        <p class="l">– charges par XFLR5, vérifiées par la méthode de Schrenk</p>
+        <p class="l">– stratifié dimensionné à la main (théorie des stratifiés, matrice ABD, Tsai-Wu, script Python), puis en coques ANSYS avec flambement</p>
+        <p class="l">– analyse modale, réponse aléatoire MIL-STD-810H, thermique du pod moteur</p>
+        <p class="l">– exigences allouées sous Capella, matrice de conformité (cadre STANAG 4671)</p>
+        <p class="l">– un tronçon fabriqué (tube carbone, peau carbone/mousse), testé en raideur et en modal par impact (ESP32, FFT), et corrélé au modèle</p>
+        <p>Ce que j'en retiens : le calcul à la main avant le modèle éléments finis reste la meilleure façon de savoir si le modèle raconte quelque chose de vrai. Et l'écart entre l'essai et le calcul est la partie la plus utile du projet, parce que c'est là qu'on apprend d'où viennent les hypothèses fausses : encastrement réel, taux de fibres, masse du capteur.</p>
+        <p>Le dossier de justification est disponible sur demande. Si vous travaillez en calcul de structures dans l'aéronautique, le spatial ou la défense, je serais content d'échanger : je termine mes études en octobre et je cherche un premier poste en bureau d'études calcul.</p>
+        <p>#calculdestructures #FEA #composites #aéronautique #drone</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyPostA }}">Copier</button>
+        <span class="meta">{{ postACount }} · accroche : {{ postAHook }} {{ copiedPostA }}</span>
+      </div>
+    </div>
+    <p class="note">Ajoute tes chiffres réels dans l'avant-dernier paragraphe (écart raideur essai/calcul, f1 mesurée vs calculée) : un post avec deux nombres précis retient mieux qu'un post général. Je ne les ai pas, donc je n'en ai mis aucun.</p>
+
+    <h3>Post B · fin d'études et recherche de poste (une à deux semaines après le post A)</h3>
+    <div class="blk">
+      <div id="postB">
+        <p>Cinq ans, cinq villes : La Réunion, Bidart, Ostrava, Cranfield, Toulouse. Je termine mes études d'ingénieur en octobre.</p>
+        <p>Diplôme d'ingénieur généraliste à l'ESTIA, MSc Computational and Software Techniques in Engineering à Cranfield University, et trois stages qui ont fixé mon cap : le calcul de structures.</p>
+        <p>Chez CMR à La Réunion, sept bâtiments industriels en charpente acier justifiés aux Eurocodes. Chez ALTEN à Toulouse, deux projets R&amp;D menés seul, un jumeau numérique supply chain et une chaîne de vision sur imagerie satellite. Entre les deux, un fuselage sous Abaqus, un stratifié en autoclave sous ANSYS, un solveur d'optimisation écrit en Python et couplé à XFOIL. Et cet été, une voilure composite de drone dimensionnée, fabriquée et testée.</p>
+        <p>Ce que je cherche à partir d'octobre 2026 : un premier poste d'ingénieur calcul ou simulation en bureau d'études, dans l'aéronautique, le spatial ou la défense. Mobile partout en France.</p>
+        <p>Ce que j'apporte : la pratique d'ANSYS, Abaqus et Fluent sur des cas réels, une culture composites (stratifiés, critères de rupture, cuisson), et du Python pour automatiser ce qui se répète dans un cycle de calcul.</p>
+        <p>Merci aux équipes de CMR, d'ALTEN, de l'ESTIA et de Cranfield pour ces années. Si vous connaissez une équipe calcul qui recrute un junior, un message ou un partage m'aiderait beaucoup. Mon CV est en commentaire.</p>
+        <p>#ingénieurcalcul #FEA #aéronautique #défense #jeunediplômé</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyPostB }}">Copier</button>
+        <span class="meta">{{ postBCount }} · accroche : {{ postBHook }} {{ copiedPostB }}</span>
+      </div>
+    </div>
+
+    <h3>Post C · version anglaise du post A (réseau Cranfield)</h3>
+    <div class="blk" lang="en-GB">
+      <div id="postC">
+        <p>Fourteen days to size, build and test a composite wing section for a UAV. Personal project, now complete.</p>
+        <p>The starting point: a 15 kg tactical UAV with a 3 m span, and one question. Can I justify a flying part end to end, rather than just compute a stress?</p>
+        <p>What it took, in order:</p>
+        <p class="l">– V-n diagram to CS-23 (n = +3.8 / −1.52), ultimate load = 1.5 × limit</p>
+        <p class="l">– loads from XFLR5, checked against Schrenk's approximation</p>
+        <p class="l">– laminate sized by hand (classical laminate theory, ABD matrix, Tsai-Wu, own Python script), then in ANSYS layered shells with linear buckling</p>
+        <p class="l">– modal analysis, random vibration to MIL-STD-810H, thermal check of the motor pod</p>
+        <p class="l">– requirements allocated in Capella, compliance matrix (STANAG 4671 as framework)</p>
+        <p class="l">– a built section (carbon tube spar, carbon/foam skin), tested in stiffness and impact-modal (ESP32, FFT) and correlated with the FE model</p>
+        <p>What I take from it: a hand calculation before the FE model is still the best way to know whether the model is telling the truth. And the gap between test and analysis is the most useful part of the project, because that is where you learn which assumptions were wrong: real clamping, fibre volume fraction, sensor mass.</p>
+        <p>The justification report is available on request. If you work in stress analysis in aerospace, space or defence, I would be glad to talk: I graduate in October and I am looking for a first design-office role.</p>
+        <p>#stressanalysis #FEA #composites #aerospace #UAV</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onClick="{{ copyPostC }}">Copier</button>
+        <span class="meta">{{ postCCount }} · hook: {{ postCHook }} {{ copiedPostC }}</span>
+      </div>
+    </div>
+    <p class="note">Ordre conseillé : bannière, titre et À propos d'abord (un profil cohérent avant que le trafic arrive), post A ensuite, post B une à deux semaines plus tard, post C la semaine du post A si ton réseau Cranfield est actif. Réponds à chaque commentaire ; mets ton CV FR en premier commentaire du post B.</p>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Sources</h2>
+    <ul style="font-size:13.5px">
+      <li><a href="https://authoredup.com/blog/linkedin-character-limit">AuthoredUp, LinkedIn Character Limits 2026</a> : post 3 000, coupure ~210 (ordinateur) / ~140 (mobile), 1 301–2 500 caractères optimaux sur 372 126 posts (sept. 2025 – févr. 2026), titre 220, À propos 2 600 avec ~300 visibles.</li>
+      <li><a href="https://www.tryordinal.com/blog/linkedin-post-size">Ordinal, LinkedIn Post Size</a> : résultat divergent sur 248 275 posts, les très courts (&lt; 150) et les longs (2 000–3 000) performent, le milieu 600–1 500 est le plus faible.</li>
+      <li><a href="https://www.linkedhelper.com/blog/linkedin-character-limit">Linked Helper</a> : description d'expérience 2 000 caractères, compétence 80.</li>
+      <li><a href="https://capsulecrm.com/blog/LinkedIn-background-banner/">Capsule</a>, <a href="https://linkedinpreview.com/blog/linkedin-background-photo-size">LinkedIn Post Preview</a>, <a href="https://www.hyperclapper.com/blog-posts/linkedin-cover-photo-size-guide">Hyperclapper</a> : bannière 1 584 × 396, 8 Mo max, photo de profil recouvrant le bas gauche (568 × 264 selon Capsule, ~200 × 200 selon Hyperclapper), zone mobile ~1 350 × 220 centrée.</li>
+      <li><a href="https://www.hiration.com/blog/does-open-to-work-hurt/">Hiration, Does the #OpenToWork badge hurt you?</a> : +40 % d'InMail recruteurs avec le cadre public (donnée LinkedIn, sept. 2024) ; stigmatisation concentrée en cabinet et executive search.</li>
+      <li><a href="https://blog.theinterviewguys.com/linkedins-hidden-open-to-work-settings-that-actually-work/">The Interview Guys</a> : avis négatifs de recruteurs sur le cadre vert ; <a href="https://magicpost.in/blog/linkedin-open-to-work-what-it-means-how-it-works-and-if-you-should-use-it">MagicPost</a> : pour un jeune diplômé, le cadre public est peu risqué.</li>
+    </ul>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bannerVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;clair&quot;,&quot;options&quot;:[&quot;clair&quot;,&quot;sombre&quot;],&quot;tsType&quot;:&quot;'clair' | 'sombre'&quot;,&quot;section&quot;:&quot;Bannière&quot;},&quot;showSafeZones&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Bannière&quot;}}">
+class Component extends DCLogic {
+  state = { counts: {}, hooks: {}, scale: 1, copied: null };
+  componentDidMount() {
+    this._measure = () => {
+      const w = document.getElementById('bannerWrap');
+      if (w && w.clientWidth) this.setState({ scale: Math.min(1, w.clientWidth / 1584) });
+    };
+    this._measure();
+    window.addEventListener('resize', this._measure);
+    this._count();
+    this._t = setTimeout(() => this._count(), 800);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._measure); clearTimeout(this._t); }
+  // Serialises a block the way LinkedIn will receive it: one blank line between paragraphs, single newline before .l lines.
+  _text(id) {
+    const el = document.getElementById(id);
+    if (!el) return '';
+    let out = '';
+    [...el.children].forEach((c, i) => {
+      const t = c.textContent.replace(/\s+/g, ' ').trim();
+      if (i > 0) out += c.classList.contains('l') ? '\n' : '\n\n';
+      out += t;
+    });
+    return out;
+  }
+  _count() {
+    const ids = ['headline', 'aboutFr', 'aboutEn', 'postA', 'postB', 'postC'];
+    const counts = {}, hooks = {};
+    ids.forEach(id => { const t = this._text(id); counts[id] = t.length; hooks[id] = t.split('\n')[0].length; });
+    this.setState({ counts, hooks });
+  }
+  _copy(id) {
+    const t = this._text(id);
+    const done = () => { this.setState({ copied: id }); clearTimeout(this._c); this._c = setTimeout(() => this.setState({ copied: null }), 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, done);
+    else { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+  }
+  renderVals() {
+    const { counts: c, hooks: h, scale, copied } = this.state;
+    const n = v => v == null ? '' : v.toLocaleString('fr-FR');
+    const fmt = (id, max) => c[id] == null ? '' : `${n(c[id])} / ${n(max)} caractères`;
+    const hook = (id, lim) => h[id] == null ? '' : `${h[id]} car. (${h[id] <= lim ? 'OK' : 'trop long'}, limite ${lim})`;
+    const cp = id => copied === id ? '· Copié' : '';
+    const variant = this.props.bannerVariant ?? 'clair';
+    return {
+      bannerScale: scale, bannerH: Math.round(396 * scale) + 2,
+      isLight: variant !== 'sombre', isDark: variant === 'sombre',
+      showZones: this.props.showSafeZones ?? false,
+      headlineCount: fmt('headline', 220), copiedHeadline: cp('headline'), copyHeadline: () => this._copy('headline'),
+      aboutFrCount: fmt('aboutFr', 2600), aboutFrHook: hook('aboutFr', 300), copiedAboutFr: cp('aboutFr'), copyAboutFr: () => this._copy('aboutFr'),
+      aboutEnCount: fmt('aboutEn', 2600), aboutEnHook: hook('aboutEn', 300), copiedAboutEn: cp('aboutEn'), copyAboutEn: () => this._copy('aboutEn'),
+      postACount: fmt('postA', 3000), postAHook: hook('postA', 140), copiedPostA: cp('postA'), copyPostA: () => this._copy('postA'),
+      postBCount: fmt('postB', 3000), postBHook: hook('postB', 140), copiedPostB: cp('postB'), copyPostB: () => this._copy('postB'),
+      postCCount: fmt('postC', 3000), postCHook: hook('postC', 140), copiedPostC: cp('postC'), copyPostC: () => this._copy('postC'),
+    };
+  }
+}
+</script>
+</body>
+</html>

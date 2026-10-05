@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/styles.css">
+  <script src="_ds/classical-ce553ac5-24d3-4d80-8f4b-92f1032ab474/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined){visibility:hidden}
+    body{margin:0;font-family:var(--font-body);color:var(--color-text)}
+    a{color:var(--color-accent-700);text-decoration:none}
+    a:hover{color:var(--color-accent-600);text-decoration:underline}
+    .lt p{margin:0;font-size:12.4px;line-height:1.6;orphans:3;widows:3}
+  </style>
+</helmet>
+<doc-page size="a4">
+  <section class="page lt" id="p1" data-screen-label="Cover letter UpNext" lang="en-GB">
+    <div style="position:absolute;inset:0;background:var(--color-bg);padding:52px 64px 48px;box-sizing:border-box;font-family:var(--font-body);color:var(--color-text);display:flex;flex-direction:column;gap:20px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding-bottom:14px;border-bottom:1px solid var(--color-text)">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <p style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.05">John Hoarau</p>
+          <p style="color:var(--color-accent-700);font-size:12px">Graduate Engineer, Flight Physics &amp; Applied AI</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;text-align:right;font-size:11.3px;color:var(--color-neutral-800)">
+          <p style="font-size:11.3px">Toulouse, France</p>
+          <p style="font-size:11.3px">+33 7 57 67 13 75 · <a href="mailto:john.hoarau@etu.estia.fr">john.hoarau@etu.estia.fr</a></p>
+          <p style="font-size:11.3px"><a href="https://www.linkedin.com/in/john-hoarau">linkedin.com/in/john-hoarau</a></p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <p style="color:var(--color-neutral-700)">Toulouse, September 2026</p>
+        <p style="font-weight:600">Re: Active Control Functions &amp; Artificial Intelligence, Xwing demonstrator · Airbus UpNext SAS · requisition JR10439981</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:11px;text-align:justify;hyphens:auto">
+        <p>Dear Hiring Manager,</p>
+        <p>I am applying for the Active Control Functions &amp; AI position on the Xwing demonstrator. I should be direct about where I stand: I complete a double degree in October 2026, a French Diplôme d'Ingénieur from ESTIA and an MSc in Computational and Software Techniques in Engineering from Cranfield University, so I do not have the flight-test seniority the leader role implies. I am writing anyway because the technical junction the posting describes, physical modelling on one side and machine learning applied to it on the other, is where all of my recent work sits, and because a demonstrator team that moves fast will need engineers who can own a work package end-to-end. If the leader position calls for more experience than mine, I would welcome being considered for an engineer role within the Flight Physics &amp; Systems team.</p>
+        <p>On the physics side, I model structures and flows and I check them. At Cranfield I built an Abaqus model of a fuselage section with a mesh sensitivity study, ran a Fluent CFD case through a grid convergence index, and, at ESTIA, simulated the autoclave cure of an AS4/8552 carbon laminate through to residual deformation. This summer I spent fourteen days justifying a composite wing section for a tactical UAV on my own: V-n envelope to CS-23, loads from XFLR5, laminate sized by classical laminate theory then in ANSYS shells, modal analysis with bending/torsion separation and a first-order flutter margin, random vibration to MIL-STD-810H, then a built specimen tested in stiffness and impact-modal and correlated back to the model. Test-to-model correlation on instrumented hardware is the part of that project I enjoyed most, and it is the part your telemetry work depends on.</p>
+        <p>On the AI side, my experience is with machine learning on physical systems rather than on generic data. For the Cranfield optimisation module I wrote a particle swarm optimiser in Python, coupled it to XFOIL through CST parameterisation, and then replaced the expensive evaluations with a surrogate model carrying uncertainty quantification for a robust-design formulation. At ALTEN's Innovation Department in Toulouse I designed and delivered, alone, a cognitive adequacy score for a supply-chain digital twin (multi-criteria analysis, Bayesian calibration, risk propagation across a multi-tier network) and a satellite-imagery segmentation pipeline. Both were taken from literature review to validated code within the internship.</p>
+        <p>The posting asks for autonomy and the ability to align people without direct authority. My evidence is modest but concrete: I led a four-person Cranfield/ESTIA project team across two countries, allocated roles from strengths profiles, set up the planning and repository, and settled the algorithm choice on measured results rather than opinion. I present in English routinely; the MSc was taught in it.</p>
+        <p>I live in Toulouse, hold French nationality, and am available from October 2026 for the full duration of the demonstrator. I would be glad to walk you through the wing project and the surrogate-model work in person.</p>
+        <p>Yours faithfully,</p>
+      </div>
+
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:2px">
+        <p style="font-family:var(--font-heading);font-weight:600;font-size:16px">John Hoarau</p>
+        <p style="font-size:11.3px;color:var(--color-neutral-700)">Enclosure: CV</p>
+      </div>
+    </div>
+  </section>
+</doc-page>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { this._nudge(0); }
+  _nudge(n) {
+    const dp = document.querySelector('doc-page');
+    const sheet = dp && dp.shadowRoot && dp.shadowRoot.querySelector('.sheet');
+    if (sheet && dp.querySelector(':scope > .page') && !sheet.classList.contains('paginated') && typeof dp._measure === 'function') dp._measure();
+    if (n < 12) setTimeout(() => this._nudge(n + 1), 250);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
